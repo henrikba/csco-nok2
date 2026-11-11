@@ -1,0 +1,2 @@
+# Hide the git repository (.git, .gitignore) when the site is deployed with git clone.
+RedirectMatch 404 /\.git
