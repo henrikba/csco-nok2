@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCO i NOK</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="page">
+    <header class="quote-header">
+        <div class="quote-exchange">Nasdaq · Omregnet med USD/NOK · Valuta i NOK</div>
+        <h1 class="quote-title">Cisco Systems, Inc. (CSCO) i NOK</h1>
+        <div class="quote-price">
+            <span id="price" class="price">–</span>
+            <span id="change" class="change"></span>
+            <span id="change-period" class="change-period"></span>
+        </div>
+        <div class="quote-meta">
+            <span id="market-status" class="market-status"></span>
+            <span id="as-of"></span>
+        </div>
+        <div id="stale-notice" class="notice" hidden>Viser lagrede kurser – klarte ikke å hente ferske data fra Yahoo Finance.</div>
+    </header>
+
+    <nav class="ranges" id="ranges" aria-label="Periode">
+        <button type="button" data-range="1d">1D</button>
+        <button type="button" data-range="1w">1U</button>
+        <button type="button" data-range="1m">1M</button>
+        <button type="button" data-range="6m">6M</button>
+        <button type="button" data-range="1y">1Å</button>
+        <button type="button" data-range="3y">3Å</button>
+        <button type="button" data-range="5y">5Å</button>
+        <button type="button" data-range="10y">10Å</button>
+    </nav>
+
+    <section class="chart-wrap">
+        <div id="chart" class="chart"></div>
+        <div id="tooltip" class="tooltip" hidden>
+            <div class="tooltip-nok" id="tt-nok"></div>
+            <div class="tooltip-row"><span>CSCO</span><span id="tt-csco"></span></div>
+            <div class="tooltip-row"><span>USD/NOK</span><span id="tt-fx"></span></div>
+            <div class="tooltip-time" id="tt-time"></div>
+        </div>
+        <div id="chart-message" class="chart-message" hidden></div>
+    </section>
+
+    <section class="stats" aria-label="Nøkkeltall">
+        <dl>
+            <div><dt id="stat-base-label">Forrige slutt</dt><dd id="stat-base">–</dd></div>
+            <div><dt id="stat-range-label">Spenn 1D</dt><dd id="stat-range">–</dd></div>
+            <div><dt>52-ukers spenn</dt><dd id="stat-52w">–</dd></div>
+            <div><dt>Siste CSCO (USD)</dt><dd id="stat-csco">–</dd></div>
+            <div><dt>Siste USD/NOK</dt><dd id="stat-fx">–</dd></div>
+        </dl>
+    </section>
+
+    <footer class="footer">
+        Kilde: Yahoo Finance (CSCO og USD/NOK). Kurs i NOK = CSCO i USD × USD/NOK på samme tidspunkt.
+        Når kurs for tidspunktet mangler, brukes dagskurs. Data kan være forsinket. Ikke investeringsråd.
+        Grafer: <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a> Lightweight Charts™.
+    </footer>
+</main>
+
+<script src="assets/vendor/lightweight-charts.standalone.production.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
